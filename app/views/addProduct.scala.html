@@ -1,0 +1,27 @@
+@main("New Product") {
+    <h1>Add New Product</h1>
+    <div class="container">
+        @helper.form(action = routes.Application.createProduct()) {
+
+            @*
+            *
+            *  NOTE: Play has built in form helpers (such as the one used to create this form).
+            *  I'm purposely not using the form helpers in order to minimize the use of scala
+            *  in the template. It's worth looking into the form helpers once better
+            *  acclimated to Play, as they are a better (simpler) solution.
+            *
+            *@
+
+            <label for="product-name">Product Name:</label>
+            <input type="text" name="product-name" id="product-name">
+
+            <label for="product-price">Price:</label>
+            <input type="text" name="product-price" id="product-price">
+
+            <label for="product-amount">Amount in Inventory:</label>
+            <input type="text" name="product-amount" id="product-amount">
+
+            <button type="submit" class="btn btn-success">Add Product</button>
+        }
+    </div>
+}

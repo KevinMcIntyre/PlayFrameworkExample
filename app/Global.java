@@ -9,7 +9,7 @@ public class Global extends GlobalSettings {
         // This is just to add some initial (seed) data so that
         // there is something in the application when you launch
         // it for the first time.
-        
+
         if (Product.find.all().isEmpty()) {
             Product bananas = new Product();
             bananas.name = "Bananas";

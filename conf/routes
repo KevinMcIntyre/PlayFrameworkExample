@@ -3,8 +3,14 @@
 # ~~~~
 
 # Home page
-GET        /                    controllers.Application.index()
-GET        /products            controllers.Application.products()
+GET         /                           controllers.Application.index()
+GET         /products                   controllers.Application.products()
+GET         /products/new               controllers.Application.newProduct()
+POST        /products/new               controllers.Application.createProduct()
+GET         /products/edit/:id          controllers.Application.editProduct(id: Integer)
+POST        /products/edit/:id          controllers.Application.updateProduct(id: Integer)
+GET         /products/delete/:id        controllers.Application.deleteProduct(id: Integer)
+
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file               controllers.Assets.at(path="/public", file)
