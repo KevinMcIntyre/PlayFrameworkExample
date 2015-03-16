@@ -1,0 +1,25 @@
+@(title: String, products: List[Product])
+
+@main(title) {
+    <h1>Product List</h1>
+    <button type="button" class="btn btn-success">New Product</button>
+
+    <div class="product-table container">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Amount Available</td>
+                </tr>
+                @for(product <- products) {
+                    <tr>
+                        <td><a href="">@product.name</a></td>
+                        <td>@product.price</td>
+                        <td>@product.amountAvailable</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
